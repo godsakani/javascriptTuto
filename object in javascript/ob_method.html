@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating JavaScript object</h1>
+    <p id="demo"></p>
+    <button id="clc me">PressMe</button>
+
+    <script>
+        let user ={
+            name:"Drew",
+            age : 24,
+        };
+        function sayHi(){
+            alert("hello");
+        }
+        user.messsage = sayHi;
+        document.getElementById("demo").innerHTML="Hi" + user.name;
+        document.getElementById("clc me").onclick= user.messsage;
+    </script>
+</body>
+</html>

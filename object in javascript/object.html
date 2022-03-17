@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript object</title>
+</head>
+<body>
+    <h1>Creating JavaScript object</h1>
+    <p id="demo"></p>
+    //creating using object level
+    <script>
+        var student ={
+            name: "Chris",
+            age: 21,
+            studies:"csc",
+        };
+        document.getElementById('demo').innerHTML = student.name + " of the age " + student.age + " studies " + student.studies;
+        
+    </script>
+    <script>
+        //using new key word
+        var student = new Object();
+        student.name = "marry",
+        student.age = 30,
+        student.studies="ccs";
+        document.getElementById('demo').innerHTML = student.name + " of the age " + student.age + " studies " + student.studies;
+    </script> 
+    <script>
+        // using a constructor
+        function stud(name,age,studies){
+            this.name = name;
+            this.age = age;
+            this.studies=studies;
+        }
+        var student = stud("drew",21,"CSC")
+        document.getElementById('demo').innerHTML = student.name + " of the age " + student.age + " studies " + student.studies;
+
+    </script>
+</body>
+</html>

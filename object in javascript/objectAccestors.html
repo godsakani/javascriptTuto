@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating JavaScript object</h1>
+    <p id="demo"></p>
+
+    <script>
+
+        var car={
+            name:"benz",
+            color:"black",
+            fuelt_type:"Kerosez",
+            get fuel(){
+                return this.fuelt_type;
+            },
+        };
+        document.getElementById("demo").innerHTMl = car.fuel;   
+    </script>
+</body>
+</html>

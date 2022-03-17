@@ -1,0 +1,71 @@
+<html>
+    <head>javascript array Tutorial</head>
+    <body>
+        <p id ="demo"></p>
+    </body>
+    <script>
+        //let allow array can be change to any value
+        let car =["Toyota","Benze","Suziki"];
+        document.getElementById("demo").innerHTML = car;
+
+        //Accessing Array
+        let toyota = car[0];
+        document.getElementById("demo").innerHTML = toyota;
+
+         //length of an array
+         let len = car.legnth;
+         document.getElementById("demo").innerHTML = len;
+
+         //Accessing last element
+         let last = car[car.legnth-1];
+         document.getElementById("demo").innerHTML = last;
+         //displaying to console
+         car.forEach((item,index,array)=>{console.log(item,index);});
+          //Array methods
+          //toString()
+        document.getElementById("demo").innerHTML = car.toString();
+           //pop element in array
+           let las1=car.pop();
+           document.getElementById("demo").innerHTML=las1;
+           let las2 =car[car.length-1];
+           console.log(las2);
+           //push method
+           car.push("mecedize");
+           document.getElementById("demo").innerHTML=car;
+            //Shift method reduce the index by 1
+            car.shift();
+            document.getElementById("demo").innerHTML=car;
+            //unshift add element at the beginning of an array increase index by 1
+            car.unshift("hybrid");
+            document.getElementById("demo").innerHTML=car;
+            //concat: create new array by merging exixting arrays
+            let bikes=["yamaha","spkes","nanfang"];
+            let veh = car.concat(bikes);
+            document.getElementById("demo").innerHTML=veh;
+            //sorting array in accending order
+            veh.sort();
+            document.getElementById("demo").innerHTML=veh;
+            //reverse method arranging in decending other
+            veh.reverse();
+            document.getElementById("demo").innerHTML=veh;
+            //Array mapping: creating an array and performing function on each of them
+            let num1 =[2,3,4,5,6,7,8];
+            let num2 =num1.map(multiply);
+            function multiply(value){
+                return value *2;
+            }
+            document.getElementById("demo").innerHTML=num2;
+            //filter method takes each element in array and apply conditional statement to it
+            let num3 =num1.filter(com);
+            function com(value){
+                return value>4;
+            }
+            document.getElementById("demo").innerHTML=num3;
+            //reduce(): reduce an array down to it just value by one
+            let num4=num1.reduce(sum);
+            function sum(total,value){
+                return total + value;
+            }
+            document.getElementById("demo").innerHTML=num4;
+    </script>
+</html>
